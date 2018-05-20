@@ -1,6 +1,6 @@
 # redhio-express
 
-A small set of abstractions that will help you quickly build an Express.js app that consumes the Redhio API.
+A small set of abstractions that will help you quickly build an Express.js app that consumes the Redhio API connected Ethereum 'Blockchain`.
 
 :exclamation: **This project is currently in alpha status**. This means that the API could change at any time. It also means that your feedback will have a big impact on how the project evolves, so please feel free to [open issues](https://github.com/redhio/redhio-express/issues) if there is something you would like to see added.
 
@@ -68,7 +68,7 @@ endpoints from a client application without having to worry about CORS.
 
 ### Strategies
 
-By default the package comes with `MemoryStrategy`, `RedisStrategy`, and `SqliteStrategy`. If none are specified, the default is `MemoryStrategy`.
+By default the package comes with `MemoryStrategy`, `RedisStrategy`, 'SqliteStrategy` and Ethereum 'Blockchain`. If none are specified, the default is `MemoryStrategy`.
 
 #### MemoryStrategy
 
