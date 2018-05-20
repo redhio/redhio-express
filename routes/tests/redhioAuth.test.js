@@ -4,14 +4,14 @@ const http = require('http');
 const express = require('express');
 
 const { MemoryStrategy } = require('../../strategies');
-const createShopifyAuthRoutes = require('../shopifyAuth');
+const createRedhioAuthRoutes = require('../redhioAuth');
 
 const PORT = 3000;
 const BASE_URL = `http://localhost:${PORT}`
 
 let server;
 let afterAuth;
-describe('shopifyAuth', async () => {
+describe('redhioAuth', async () => {
   beforeEach(async () => {
     afterAuth = jest.fn();
     server = await createServer({afterAuth});
@@ -73,7 +73,7 @@ function createServer(userConfig = {}) {
   const app = express();
 
   const serverConfig = {
-    host: 'http://myshop.myshopify.com',
+    host: 'http://app.redh.io',
     apiKey: 'key',
     secret: 'secret',
     scope: ['scope'],
