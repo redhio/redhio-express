@@ -1,6 +1,6 @@
-const shopifyExpress = require('../index');
+const redhioExpress = require('../index');
 
-describe('ShopifyConfig', async () => {
+describe('RedhioConfig', async () => {
   const originalConsoleError = console.error;
   beforeEach(() => {
     console.error = jest.fn();
@@ -11,13 +11,13 @@ describe('ShopifyConfig', async () => {
   });
 
   it('logs errors when given empty object', () => {
-    shopifyExpress({});
+    redhioExpress({});
     expect(console.error).toBeCalled();
     expect(console.error.mock.calls).toMatchSnapshot();
   });
 
   it('logs errors when given bad props', () => {
-    shopifyExpress({
+    redhioExpress({
       apiKey: 32,
       host: { notGood: true },
       secret: true,
@@ -30,7 +30,7 @@ describe('ShopifyConfig', async () => {
   });
 
   it('does not log errors when given valid proptypes', () => {
-    shopifyExpress({
+    redhioExpress({
       apiKey: 'fake',
       host: 'fake',
       secret: 'cats',
