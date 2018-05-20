@@ -1,8 +1,8 @@
 const createWithWebhook = require('./webhooks');
 const withShop = require('./withShop');
 
-module.exports = function createMiddleware(shopifyConfig) {
-  const withWebhook = createWithWebhook(shopifyConfig);
+module.exports = function createMiddleware(redhioConfig) {
+  const withWebhook = createWithWebhook(redhioConfig);
 
   return {
     withShop,
