@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ShopifyConfig logs errors when given bad props 1`] = `
+Array [
+  Array [
+    "Warning: Failed option type: Invalid option \`apiKey\` of type \`number\` supplied to \`RedhioExpress\`, expected \`string\`.",
+  ],
+  Array [
+    "Warning: Failed option type: Invalid option \`host\` of type \`object\` supplied to \`RedhioExpress\`, expected \`string\`.",
+  ],
+  Array [
+    "Warning: Failed option type: Invalid option \`secret\` of type \`boolean\` supplied to \`RedhioExpress\`, expected \`string\`.",
+  ],
+  Array [
+    "Warning: Failed option type: Invalid option \`scope\` of type \`string\` supplied to \`RedhioExpress\`, expected an array.",
+  ],
+  Array [
+    "Warning: Failed option type: Invalid option \`afterAuth\` of type \`boolean\` supplied to \`RedhioExpress\`, expected \`function\`.",
+  ],
+  Array [
+    "Warning: Failed option type: Invalid option \`accessMode\` of value \`gerblable\` supplied to \`RedhioExpress\`, expected one of [\\"offline\\",\\"online\\"].",
+  ],
+]
+`;
+
+exports[`ShopifyConfig logs errors when given empty object 1`] = `
+Array [
+  Array [
+    "Warning: Failed option type: The option \`apiKey\` is marked as required in \`RedhioExpress\`, but its value is \`undefined\`.",
+  ],
+  Array [
+    "Warning: Failed option type: The option \`host\` is marked as required in \`RedhioExpress\`, but its value is \`undefined\`.",
+  ],
+  Array [
+    "Warning: Failed option type: The option \`secret\` is marked as required in \`RedhioExpress\`, but its value is \`undefined\`.",
+  ],
+  Array [
+    "Warning: Failed option type: The option \`scope\` is marked as required in \`RedhioExpress\`, but its value is \`undefined\`.",
+  ],
+  Array [
+    "Warning: Failed option type: The option \`afterAuth\` is marked as required in \`RedhioExpress\`, but its value is \`undefined\`.",
+  ],
+]
+`;
