@@ -13,7 +13,7 @@ const DISALLOWED_URLS = [
   '/oauth',
 ];
 
-module.exports = async function shopifyApiProxy(incomingRequest, response, next) {
+module.exports = async function redhioApiProxy(incomingRequest, response, next) {
   const { query, method, path: pathname, body, session } = incomingRequest;
 
   if (session == null) {
@@ -46,7 +46,7 @@ module.exports = async function shopifyApiProxy(incomingRequest, response, next)
       body,
       headers: {
         'Content-Type': 'application/json',
-        'X-Shopify-Access-Token': accessToken,
+        'X-Redhio-Access-Token': accessToken,
       },
     });
 
