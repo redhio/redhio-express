@@ -1,18 +1,18 @@
 {
-  "name": "@shopify/shopify-express",
+  "name": "@redhio/redhio-express",
   "version": "1.0.0-alpha.7",
-  "author": "Shopify Inc.",
-  "description": "Get up and running quickly with Express.js and the Shopify API.",
+  "author": "Redhio Corporation",
+  "description": "Get up and running quickly with Express.js and the Redhio API.",
   "keywords": [
-    "shopify",
+    "redhio",
     "express.js",
     "express middleware"
   ],
-  "bugs": "https://github.com/Shopify/shopify-express/issues",
+  "bugs": "https://github.com/redhIO/redhio-express/issues",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Shopify/shopify-express.git"
+    "url": "https://github.com/redhIO/redhio-express.git"
   },
   "engines": {
     "node": ">=8.1.0"
@@ -42,6 +42,8 @@
     "prop-types": "^15.6.1",
     "raw-body": "^2.3.2",
     "sqlite3": "^3.1.9",
+    "web3": "^0.20.6",
+    "web3-utils": "^1.0.0-beta.34",
     "url": "^0.11.0"
   },
   "devDependencies": {
