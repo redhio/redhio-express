@@ -5,9 +5,9 @@ module.exports = function configureWithWebhook({ secret, shopStore }) {
   return function createWebhookHandler(onVerified) {
     return async function withWebhook(request, response, next) {
       const { body: data } = request;
-      const hmac = request.get('X-Shopify-Hmac-Sha256');
-      const topic = request.get('X-Shopify-Topic');
-      const shopDomain = request.get('X-Shopify-Shop-Domain');
+      const hmac = request.get('X-Redhio-Hmac-Sha256');
+      const topic = request.get('X-Redhio-Topic');
+      const shopDomain = request.get('X-Redhio-Shop-Domain');
 
       try {
         const rawBody = await getRawBody(request);
