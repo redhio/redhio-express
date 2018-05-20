@@ -4,10 +4,10 @@ const http = require('http');
 const fetch = require.requireActual('node-fetch');
 const fetchMock = require.requireMock('node-fetch');
 
-const shopifyApiProxy = require('../shopifyApiProxy');
+const redhioApiProxy = require('../redhioApiProxy');
 
-const { DISALLOWED_URLS } = shopifyApiProxy;
-const PORT = 3000;
+const { DISALLOWED_URLS } = redhioApiProxy;
+const PORT = 8052;
 const BASE_URL = `http://localhost:${PORT}`;
 const API_ROUTE = '/api';
 
@@ -16,7 +16,7 @@ jest.mock('node-fetch');
 let session;
 let server;
 const originalConsoleError = console.error;
-describe('shopifyApiProxy', async () => {
+describe('redhioApiProxy', async () => {
   beforeEach(async () => {
     fetchMock.mockImplementation(() => ({ status: 200, text: () => Promise.resolve() }));
 
@@ -118,7 +118,7 @@ function createServer() {
       req.session = session;
       next();
     },
-    shopifyApiProxy
+    redhioApiProxy
   );
 
   server = http.createServer(app);
