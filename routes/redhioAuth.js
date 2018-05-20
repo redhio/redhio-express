@@ -2,7 +2,7 @@ const querystring = require('querystring');
 const crypto = require('crypto');
 const fetch = require('node-fetch');
 
-module.exports = function createShopifyAuthRoutes({
+module.exports = function createRedhioAuthRoutes({
   host,
   apiKey,
   secret,
@@ -12,7 +12,7 @@ module.exports = function createShopifyAuthRoutes({
   accessMode,
 }) {
   return {
-    // This function initializes the Shopify OAuth Process
+    // This function initializes the Redhio OAuth Process
     auth(request, response) {
       const { query, baseUrl } = request;
       const { shop } = query;
@@ -47,7 +47,7 @@ module.exports = function createShopifyAuthRoutes({
     },
 
     // Users are redirected here after clicking `Install`.
-    // The redirect from Shopify contains the authorization_code query parameter,
+    // The redirect from Redhio contains the authorization_code query parameter,
     // which the app exchanges for an access token
     async callback(request, response, next) {
       const { query } = request;
