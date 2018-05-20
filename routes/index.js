@@ -1,13 +1,13 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
-const createShopifyAuthRoutes = require('./shopifyAuth');
-const shopifyApiProxy = require('./shopifyApiProxy');
+const createShopifyAuthRoutes = require('./redhioAuth');
+const shopifyApiProxy = require('./redhioApiProxy');
 
-module.exports = function createRouter(shopifyConfig) {
+module.exports = function createRouter(redhioConfig) {
   const router = express.Router();
   const rawParser = bodyParser.raw({ type: '*/*' });
-  const {auth, callback} = createShopifyAuthRoutes(shopifyConfig)
+  const {auth, callback} = createRedhioAuthRoutes(redhioConfig)
 
   router.use('/auth/callback', callback);
   router.use('/auth', auth);
@@ -15,7 +15,7 @@ module.exports = function createRouter(shopifyConfig) {
     '/api',
     rawParser,
     verifyApiCall,
-    shopifyApiProxy,
+    redhioApiProxy,
   );
 
   return router;
