@@ -1,4 +1,4 @@
-# redhioy-express
+# redhio-express
 
 A small set of abstractions that will help you quickly build an Express.js app that consumes the Redhio API.
 
@@ -9,7 +9,7 @@ A small set of abstractions that will help you quickly build an Express.js app t
 
 ```javascript
 const express = require('express');
-const shopifyExpress = require('@redhio/redhio-express');
+const redhioExpress = require('@redhio/redhio-express');
 const session = require('express-session');
 
 const app = express();
