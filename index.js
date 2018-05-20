@@ -3,7 +3,7 @@ const createRouter = require('./routes');
 const createMiddleware = require('./middleware');
 const {MemoryStrategy} = require('./strategies');
 
-const ShopifyConfigTypes = {
+const RedhioConfigTypes = {
   apiKey: PropTypes.string.isRequired,
   host: PropTypes.string.isRequired,
   secret: PropTypes.string.isRequired,
@@ -18,10 +18,10 @@ const defaults = {
   accessMode: 'offline'
 };
 
-module.exports = function shopify(shopifyConfig) {
-  PropTypes.checkPropTypes(ShopifyConfigTypes, shopifyConfig, 'option', 'ShopifyExpress');
+module.exports = function redhio(redhioConfig) {
+  PropTypes.checkPropTypes(RedhioConfigTypes, redhioConfig, 'option', 'RedhioExpress');
 
-  const config = Object.assign({}, defaults, shopifyConfig);
+  const config = Object.assign({}, defaults, redhioConfig);
 
   return {
     middleware: createMiddleware(config),
