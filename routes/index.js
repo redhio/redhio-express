@@ -1,8 +1,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
-const createShopifyAuthRoutes = require('./redhioAuth');
-const shopifyApiProxy = require('./redhioApiProxy');
+const createRedhioAuthRoutes = require('./redhioAuth');
+const redhioApiProxy = require('./redhioApiProxy');
 
 module.exports = function createRouter(redhioConfig) {
   const router = express.Router();

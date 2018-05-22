@@ -77,7 +77,7 @@ describe('redhioApiProxy', async () => {
 
     const expectedHeaders = {
       'Content-Type': 'application/json',
-      'X-Shopify-Access-Token': accessToken,
+      'X-Redhio-Access-Token': accessToken,
     };
     const expectedPath = `https://${session.shop}/admin/`;
 
